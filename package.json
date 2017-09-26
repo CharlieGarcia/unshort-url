@@ -1,13 +1,20 @@
 {
   "name": "unshort-url",
   "version": "1.0.0",
-  "description": "",
+  "description": "A nodejs unshort helper",
   "main": "index.js",
+  "repository": "https://github.com/CharlieEscoboza/unshort-url",
   "scripts": {
     "lint": "eslint ./index.js",
-    "test": "node ./node_modules/mocha/bin/mocha ./tests/index.js"
+    "test": "node ./node_modules/mocha/bin/mocha ./tests/index.js",
+    "precommit": "npm run lint",
+    "prepush": "npm run test"
   },
-  "keywords": ["Node", "Promise", "isomorphic-fetch"],
+  "keywords": [
+    "Node",
+    "Promise",
+    "isomorphic-fetch"
+  ],
   "author": "Charlie Escoboza",
   "license": "MIT",
   "dependencies": {
@@ -18,6 +25,7 @@
     "chai": "^4.1.2",
     "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-mocha": "^4.11.0"
+    "eslint-plugin-mocha": "^4.11.0",
+    "husky": "^0.14.3"
   }
 }
